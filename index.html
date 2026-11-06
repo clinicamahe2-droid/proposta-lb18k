@@ -56,7 +56,12 @@ p { margin: 0; }
 
 /* gráfico */
 .chart { overflow-x: auto; }
-.chart svg { display: block; width: 100%; min-width: 480px; height: auto; }
+.chart svg { display: block; width: 100%; height: auto; }
+@media (max-width: 560px) {
+  .chart .ax { font-size: 19px; }
+  .chart .lab { font-size: 20px; }
+  .chart text.lab.end { display: none; }
+}
 .chart .grid { stroke: var(--line); stroke-width: 1; }
 .chart .ax { fill: var(--muted); font: 500 11px var(--body); }
 .chart .area { fill: var(--gold-soft); }
